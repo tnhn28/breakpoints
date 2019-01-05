@@ -1,0 +1,256 @@
+@font-face{
+	font-family: 'Wisdom Script';
+	src: url('../fonts/wisdom-script.otf') format('opentype');
+}
+/***  Set Base Font Size  ***/
+
+html {
+	font-size: 16px;
+}
+
+/***   Set Base Styles   ***/
+/***   Mobile First And Responsive  ***/ 
+/***   Using Percentages And EMS   ***/
+
+body {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	max-width: 1200px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+h1 {
+	font-size: 1.87em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+	font-size: 1.12em;
+}
+h4 {
+	font-size: 0.75em;
+}
+
+p {
+	font-size: 0.87em;
+	line-height: 1.31em;
+    padding: 0 1.87em;
+}
+
+/*The widths are in a percentage!*/
+header {
+	border-bottom: 0.18em solid #77a466;
+	text-align: center;
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;  /* Makes Nav Vertical */
+	flex-flow: row wrap;  /* Makes Nav Move Below H1 */
+}
+
+header h1 {
+	margin: 0;
+	padding: 2em 0;
+	display: flex;
+	justify-content: center;
+	border-bottom: 0.1em solid #77a466;  /* Makes Line Above Nav */
+	width: 100%;  /* Make Line Go Across Page */
+}
+header h1 span {
+	color: #77a466;
+}
+
+header nav {
+	width: 100%;
+	padding: 2.87em 0;
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.87em;
+	padding: 0.62em 0;
+	list-style: none; 
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color:#77a466;
+}
+
+/*The widths are in a percentage!*/
+.top-section,
+.bottom-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;  /* Puts Image Under Nav */
+}
+
+.main-image img {
+	width: 100%;
+	border-bottom: 3px solid #77a466;
+}
+
+.main-title h3 {
+	text-align: left;
+	font-size: 1.12em;
+	padding: 0.31em 0;
+	color: #77a466;
+}
+.main-title p {
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.56em;
+}
+
+.section-one,
+.section-two,
+.section-three {
+	width: 100%;
+	border-top: 0.06em solid #eee;
+}
+
+/***  Centers Text In Bottom Section  **/
+.section-one h4,
+.section-two h4,
+.section-three h4 {
+	display: flex;
+	justify-content: center;
+}
+.menu {
+	list-style: none;
+	padding: 0;
+}
+.menu li {
+	padding: 0.62em 0;
+	color:#77a466;
+	display:flex;
+	justify-content: center;
+}
+
+/***   Centers Text In Bottom Section  ***/
+.section-two p,
+.section-three p {
+	display: flex;
+	justify-content: center;
+}
+.reviews {
+	color: #333;
+	font-size: 1em;
+	line-height: 1.31em;
+}
+
+.address {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+/*The widths are in a percentage!*/
+footer {
+	border-top: 0.18em solid #eee;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer span {
+	font-family: 'Wisdom Script', cursive;
+	text-transform: lowercase;
+	color: #77a466;
+	font-size: 0.87em;
+}
+
+/***   Set Styles For Tablets   ***/
+
+@media all and (min-width: 768px) {
+	.bottom-section {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: 0.06em solid #eee;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;  /* Makes Sections Horizontal */
+	}
+
+    .section-one h4 {
+		padding: 0.62em 0;
+	}
+
+	.section-two {
+		border-left: 0.06em solid #eee;
+		border-right: 0.06em solid #eee;
+	}
+
+	.section-two h4,
+	.section-three h4 {
+		padding: 0.62em 1.87em;
+	}
+
+	.menu {
+		list-style: none;
+	}
+
+	.menu li {
+		padding: 0.62em 0;
+		color: #77a466;
+		display: flex;
+		justify-content: center;
+	}
+
+/***   Set Styles For Desktops   ***/
+
+
+	
+	@media all and (min-width: 1200px) {
+		header {
+			justify-content: space-between;
+		}
+	
+		header h1 {
+			width: 30%;
+			padding: 0;
+			border-bottom: none;
+			text-align: left;
+		}
+	    header nav {
+			width: 40%;
+		}
+		
+	
+		header nav ul {
+			display: flex;
+			justify-content: space-between;
+		}
+}
+}
